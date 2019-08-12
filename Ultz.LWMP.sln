@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultz.LWMP", "Ultz.LWMP\Ultz.LWMP.csproj", "{177FAF0E-5DC4-4B53-BAC4-95BC0DFA24C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultz.LWMP", "src\Ultz.LWMP\Ultz.LWMP.csproj", "{177FAF0E-5DC4-4B53-BAC4-95BC0DFA24C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "src\Demo\Demo.csproj", "{5654C165-8C6D-415A-B55D-7112C388D5B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2B36B6F9-6EA5-42B2-A2FC-BCE6F45F7967}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +16,13 @@ Global
 		{177FAF0E-5DC4-4B53-BAC4-95BC0DFA24C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{177FAF0E-5DC4-4B53-BAC4-95BC0DFA24C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{177FAF0E-5DC4-4B53-BAC4-95BC0DFA24C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5654C165-8C6D-415A-B55D-7112C388D5B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5654C165-8C6D-415A-B55D-7112C388D5B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5654C165-8C6D-415A-B55D-7112C388D5B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5654C165-8C6D-415A-B55D-7112C388D5B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5654C165-8C6D-415A-B55D-7112C388D5B5} = {2B36B6F9-6EA5-42B2-A2FC-BCE6F45F7967}
+		{177FAF0E-5DC4-4B53-BAC4-95BC0DFA24C6} = {2B36B6F9-6EA5-42B2-A2FC-BCE6F45F7967}
 	EndGlobalSection
 EndGlobal

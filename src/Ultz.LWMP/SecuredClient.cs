@@ -1,20 +1,32 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Security;
 using System.Net.Sockets;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace Ultz.LWMP
 {
-    public class TcpLwmpClient : IClient
+    public class SecuredClient : IClient
     {
-        public TcpLwmpClient(TcpClient client)
+        // Server ctor
+        public SecuredClient(TcpClient client, X509Certificate certificate)
         {
             Client = client;
-            _stream = client.GetStream();
+            _stream = new SslStream(client.GetStream());
+            _stream.AuthenticateAsServer(certificate);
+        }
+
+        // Client ctor
+        public SecuredClient(TcpClient client, string hostname)
+        {
+            Client = client;
+            _stream = new SslStream(client.GetStream());
+            _stream.AuthenticateAsClient(hostname);
         }
         
-        private Stream _stream;
+        private SslStream _stream;
         public TcpClient Client { get; }
 
         public async Task<IEnumerable<byte>> ReadBytesAsync(int len)
