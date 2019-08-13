@@ -29,6 +29,8 @@ namespace Ultz.LWMP
         private SslStream _stream;
         public TcpClient Client { get; }
 
+        public bool IsConnected => Client.Connected;
+
         public async Task<IEnumerable<byte>> ReadBytesAsync(int len)
         {
             var read = 0;

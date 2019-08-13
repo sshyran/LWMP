@@ -15,6 +15,8 @@ namespace Demo
         {
         }
 
+        public bool IsConnected { get; } = true;
+
         public Task<IEnumerable<byte>> ReadBytesAsync(int len)
         {
             var res = new byte[len];

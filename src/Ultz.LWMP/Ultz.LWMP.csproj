@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <Version>1.0.0-pre</Version>
+        <Version>1.0.0-pre2</Version>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/ultz/lwmp</PackageProjectUrl>
     </PropertyGroup>
